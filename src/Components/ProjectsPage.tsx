@@ -25,15 +25,14 @@ const projects = [
 
 const ProjectsPage = () => {
     const [index, setIndex] = useState(0)
-    const [isFading, setIsFading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     const total = projects.length
 
     const navigateTo = (nextIndex: number) => {
-        setIsFading(true)
+        setIsLoading(true)
         setTimeout(() => {
-            setIndex(((nextIndex % total) + total) % total)
-            // allow DOM to update before showing
-            setTimeout(() => setIsFading(false), 20)
+            setIndex(((nextIndex % total) + total) % total)	
+            setTimeout(() => setIsLoading(false), 750)
         }, 180)
     }
 
@@ -57,19 +56,27 @@ const ProjectsPage = () => {
 				<div className="mt-10 max-w-4xl mx-auto flex items-center gap-6">
 					<button
 						onClick={goPrev}
-						className="text-purple-500 hover:text-purple-400 transition-colors"
+						disabled={isLoading}
+						className={`text-purple-500 hover:text-purple-400 transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
 						aria-label="Previous project"
 					>
 						<svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
 					</button>
 
-					<div className={`flex-1 transition-opacity duration-300 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
-						<ProjectDisplay {...projects[index]} />
+					<div className="flex-1">
+						{isLoading ? (
+							<div className="flex items-center justify-center h-[380px] sm:h-[460px]">
+								<div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-500"></div>
+							</div>
+						) : (
+							<ProjectDisplay {...projects[index]} />
+						)}
 					</div>
 
 					<button
 						onClick={goNext}
-						className="text-purple-500 hover:text-purple-400 transition-colors"
+						disabled={isLoading}
+						className={`text-purple-500 hover:text-purple-400 transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
 						aria-label="Next project"
 					>
 						<svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
@@ -84,7 +91,8 @@ const ProjectsPage = () => {
                             <button
                                 key={p.name}
                                 onClick={() => goTo(i)}
-                                className={`h-2.5 w-2.5 rounded-full transition-colors ${i === index ? 'bg-purple-500' : 'bg-gray-600 hover:bg-gray-500'}`}
+                                disabled={isLoading}
+                                className={`h-2.5 w-2.5 rounded-full transition-colors ${i === index ? 'bg-purple-500' : 'bg-gray-600 hover:bg-gray-500'} ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 aria-label={`Go to project ${i + 1}`}
                             />
                         ))}

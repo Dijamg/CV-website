@@ -4,11 +4,11 @@ const ProjectDisplay = (project: any) => {
 		: project.image
 
 	return (
-		<div className="relative group overflow-hidden rounded-xl shadow-lg ring-1 ring-purple-500/30">
+		<div className="relative group overflow-hidden rounded-xl shadow-lg ring-3 ring-purple-500/100">
 			<img
 				src={imageSrc}
 				alt={project.name}
-				className="block w-full h-[380px] sm:h-[460px] object-cover"
+				className="block w-full h-[380px] sm:h-[460px] object-cover rounded-lg"
 			/>
 			<div className="pointer-events-none absolute inset-0 bg-black/0 group-hover:bg-black/80 transition-colors duration-300" />
 			<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center">
