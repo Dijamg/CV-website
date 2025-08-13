@@ -1,5 +1,35 @@
 import Reveal from './Reveal'
 
+const frontendSkills = [
+	"JavaScript",
+	"TypeScript", 
+	"HTML",
+	"CSS",
+	"React",
+	"Svelte",
+	"Tailwind"
+]
+
+const backendSkills = [
+	"Java",
+	"Spring Boot",
+	"Node.js",
+	"Express.js",
+	"Scala",
+	"Kotlin"
+]
+
+const otherSkills = [
+	"SQL",
+	"PostgreSQL",
+	"MongoDB",
+	"Docker",
+	"Jenkins",
+	"Nginx",
+	"Git",
+	"Linux"
+]
+
 const SkillsPage = () => {
 	return (
 		<section id="skills" className="bg-[#0A192F] text-white">
@@ -20,13 +50,14 @@ const SkillsPage = () => {
 						<div>
 						<h3 className="text-purple-500 font-semibold mb-3">Frontend</h3>
 						<ul className="space-y-2 text-gray-400">
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>JavaScript</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>TypeScript</li>
-                            <li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>HTML</li>
-                            <li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>CSS</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>React</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Svelte</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Tailwind</li>
+							{frontendSkills.map((skill, index) => (
+								<li key={index} className="flex items-start gap-3">
+									<svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+										<polygon points="0,0 10,5 0,10" />
+									</svg>
+									{skill}
+								</li>
+							))}
 						</ul>
 						</div>
 						</Reveal>
@@ -35,12 +66,14 @@ const SkillsPage = () => {
 						<div>
 						<h3 className="text-purple-500 font-semibold mb-3">Backend</h3>
 						<ul className="space-y-2 text-gray-400">
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Java</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Spring Boot</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Node.js</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Express.js</li>
-                            <li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Scala</li>
-                            <li  className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Kotlin</li>
+							{backendSkills.map((skill, index) => (
+								<li key={index} className="flex items-start gap-3">
+									<svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+										<polygon points="0,0 10,5 0,10" />
+									</svg>
+									{skill}
+								</li>
+							))}
 						</ul> 
 						</div>
 						</Reveal>
@@ -49,14 +82,14 @@ const SkillsPage = () => {
 						<div>
 						<h3 className="text-purple-500 font-semibold mb-3">Database/others</h3>
 						<ul className="space-y-2 text-gray-400">
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>SQL</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>PostgreSQL</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>MongoDB</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Docker</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Jenkins</li>
-							<li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Nginx</li>
-                            <li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Git</li>
-                            <li className="flex items-start gap-3"><svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 10,5 0,10" /></svg>Linux</li>
+							{otherSkills.map((skill, index) => (
+								<li key={index} className="flex items-start gap-3">
+									<svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+										<polygon points="0,0 10,5 0,10" />
+									</svg>
+									{skill}
+								</li>
+							))}
 						</ul>
 						</div>
 						</Reveal>
