@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Custom spinning animation for the circle */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Simple fade-in animation for letter D */
+@keyframes fadeInD {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Simple fade-in animation for letter G */
+@keyframes fadeInG {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations with sequential timing */
+.animate-spin {
+  animation: spin 3s linear infinite;
+}
+
+.animate-fade-in-d {
+  animation: fadeInD 1s ease-out forwards;
+}
+
+.animate-fade-in-g {
+  animation: fadeInG 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
