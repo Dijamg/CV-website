@@ -32,7 +32,7 @@ const ProjectsPage = () => {
         setIsLoading(true)
         setTimeout(() => {
             setIndex(((nextIndex % total) + total) % total)	
-            setTimeout(() => setIsLoading(false), 750)
+            setTimeout(() => setIsLoading(false), 1000)
         }, 180)
     }
 
