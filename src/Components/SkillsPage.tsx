@@ -45,7 +45,7 @@ const SkillsPage = () => {
 				</div>
 
 				<div className="max-w-4xl mx-auto">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300">
+					<div className="grid grid-cols-3 gap-4 md:gap-8 text-gray-300">
 						<Reveal delayMs={150}>
 						<div>
 						<h3 className="text-purple-500 font-semibold mb-3">Frontend</h3>
