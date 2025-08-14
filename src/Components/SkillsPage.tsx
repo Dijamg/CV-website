@@ -15,6 +15,7 @@ const backendSkills = [
 	"Spring Boot",
 	"Node.js",
 	"Express.js",
+	"REST APIs",
 	"Scala",
 	"Kotlin"
 ]
