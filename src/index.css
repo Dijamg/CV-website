@@ -14,6 +14,16 @@ body {
   }
 }
 
+/* Fast spinning animation (3x faster) */
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Simple fade-in animation for letter D */
 @keyframes fadeInD {
   0% {
@@ -41,6 +51,10 @@ body {
 /* Apply animations with sequential timing */
 .animate-spin {
   animation: spin 3s linear infinite;
+}
+
+.animate-spin-fast {
+  animation: spin-fast 1s linear infinite;
 }
 
 .animate-fade-in-d {

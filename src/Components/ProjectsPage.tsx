@@ -66,7 +66,7 @@ const ProjectsPage = () => {
 					<div className="flex-1">
 						{isLoading ? (
 							<div className="flex items-center justify-center h-[380px] sm:h-[460px]">
-								<div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-500"></div>
+								<div className="animate-spin-fast rounded-full h-16 w-16 border-b-2 border-purple-500"></div>
 							</div>
 						) : (
 							<ProjectDisplay {...projects[index]} />
