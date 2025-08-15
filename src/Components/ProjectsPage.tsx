@@ -21,6 +21,12 @@ const projects = [
 		image: "towergame.PNG",
 		link: "https://github.com/Dijamg/TowerGame"
 	}, 
+	{
+		name: "FlyingWitch",
+		description: "A simple game made in Java, which works for both desktop and Android devices.",
+		image: "flyingwitch.png",
+		link: "https://github.com/Dijamg/FlyingWitch"
+	}
 ]
 
 const ProjectsPage = () => {
@@ -57,7 +63,7 @@ const ProjectsPage = () => {
 					<button
 						onClick={goPrev}
 						disabled={isLoading}
-						className={`text-purple-500 hover:text-purple-400 transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+						className={`cursor-pointer text-purple-500 hover:text-purple-400 transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
 						aria-label="Previous project"
 					>
 						<svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -76,7 +82,7 @@ const ProjectsPage = () => {
 					<button
 						onClick={goNext}
 						disabled={isLoading}
-						className={`text-purple-500 hover:text-purple-400 transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+						className={`cursor-pointer text-purple-500 hover:text-purple-400 transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
 						aria-label="Next project"
 					>
 						<svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
@@ -92,7 +98,7 @@ const ProjectsPage = () => {
                                 key={p.name}
                                 onClick={() => goTo(i)}
                                 disabled={isLoading}
-                                className={`h-2.5 w-2.5 rounded-full transition-colors ${i === index ? 'bg-purple-500' : 'bg-gray-600 hover:bg-gray-500'} ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`cursor-pointer h-2.5 w-2.5 rounded-full transition-colors ${i === index ? 'bg-purple-500' : 'bg-gray-600 hover:bg-gray-500'} ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 aria-label={`Go to project ${i + 1}`}
                             />
                         ))}
