@@ -52,8 +52,8 @@ const SkillsPage = () => {
 						<h3 className="text-purple-500 font-semibold mb-3">Frontend</h3>
 						<ul className="space-y-2 text-gray-400">
 							{frontendSkills.map((skill, index) => (
-								<li key={index} className="flex items-start gap-3">
-									<svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+								<li key={index} className="flex items-center gap-3">
+									<svg className="h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
 										<polygon points="0,0 10,5 0,10" />
 									</svg>
 									{skill}
@@ -68,8 +68,8 @@ const SkillsPage = () => {
 						<h3 className="text-purple-500 font-semibold mb-3">Backend</h3>
 						<ul className="space-y-2 text-gray-400">
 							{backendSkills.map((skill, index) => (
-								<li key={index} className="flex items-start gap-3">
-									<svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+								<li key={index} className="flex items-center gap-3">
+									<svg className="h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
 										<polygon points="0,0 10,5 0,10" />
 									</svg>
 									{skill}
@@ -84,8 +84,8 @@ const SkillsPage = () => {
 						<h3 className="text-purple-500 font-semibold mb-3">Database/others</h3>
 						<ul className="space-y-2 text-gray-400">
 							{otherSkills.map((skill, index) => (
-								<li key={index} className="flex items-start gap-3">
-									<svg className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+								<li key={index} className="flex items-center gap-3">
+									<svg className="h-2.5 w-2.5 flex-shrink-0 text-purple-500" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
 										<polygon points="0,0 10,5 0,10" />
 									</svg>
 									{skill}
