@@ -66,30 +66,18 @@ body {
   opacity: 0;
 }
 
-*::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-*::-webkit-scrollbar-track {
-  background: #0A192F;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: #5a6b87;
-  border-radius: 4px;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #6b7c98;
-}
-
-* {
+html {
   scrollbar-width: thin;
   scrollbar-color: #5a6b87 #0A192F;
 }
-
-/* Mobile scrollbar improvements */
-@media (max-width: 768px) {
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #5a6b87 #0A192F;
-  }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #0A192F;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #5a6b87;
+  border: 3px solid #0A192F;
+  border-radius: 10px;
 }
