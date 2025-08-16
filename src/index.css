@@ -67,8 +67,8 @@ body {
 }
 
 *::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 *::-webkit-scrollbar-track {
   background: #0A192F;
@@ -78,10 +78,18 @@ body {
   border-radius: 4px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #5a6b87;
+  background-color: #6b7c98;
 }
 
 * {
   scrollbar-width: thin;
   scrollbar-color: #5a6b87 #0A192F;
+}
+
+/* Mobile scrollbar improvements */
+@media (max-width: 768px) {
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #5a6b87 #0A192F;
+  }
 }
