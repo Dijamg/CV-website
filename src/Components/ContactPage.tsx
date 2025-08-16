@@ -5,7 +5,7 @@ const ContactPage = () => {
 	const [showContact, setShowContact] = useState(false)
 	
 	return (
-		<section id="contact" className="bg-[#0A192F] text-white">
+		<section id="contact" className="bg-[#0A192F] text-white md:pb-8">
 			<div className="max-w-6xl mx-auto px-6 sm:px-8 pt-28 pb-24">
 				<div className="max-w-6xl mx-auto">
 					<Reveal>
@@ -51,7 +51,7 @@ const ContactPage = () => {
 				
 				{/* Footer */}
 				<div className="mt-24 pt-8">
-					<div className="flex justify-center items-center space-x-8">
+					<div className="flex justify-center items-center space-x-8 md:hidden">
 						{/* LinkedIn Logo */}
 						<a 
 							href="https://linkedin.com/in/dijam-goran-b85635369/" 
