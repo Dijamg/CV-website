@@ -2,6 +2,11 @@ import Reveal from './Reveal'
 
 const workExperience = [
 	{
+		period: "2025/9 - Present",
+		company: "Taloustutka",
+		title: "Software Developer"
+	},
+	{
 		period: "2025/4 - 2025/7",
 		company: "Aalto University",
 		title: "Research Assistant"
